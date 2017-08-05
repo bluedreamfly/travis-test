@@ -1,5 +1,6 @@
 nguage: node_js
 sudo: enabled
+dist: trusty
 node_js:
 - node
 - '7'
