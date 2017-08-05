@@ -7,6 +7,8 @@ before_install:
 # - eval $(ssh-agent)
 # - ssh-add ~/.ssh/id_rsa
 # - echo -e "Host 120.25.227.28\n\tStrictHostKeyChecking no\n" >> ~/.ssh/id_rsa
+
+- chmod 777 ~/.ssh
 - touch ~/.ssh/id_rsa
 # - ssh-keygen -f ~/.ssh/id_rsa
 - ls -la ~/.ssh
