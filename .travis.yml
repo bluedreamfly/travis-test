@@ -2,4 +2,4 @@ nguage: node_js
 node_js:
   - "node"
   - "7"
-script: node
+script: node index.js
