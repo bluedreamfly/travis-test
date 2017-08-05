@@ -4,11 +4,11 @@ node_js:
 - '7'
 script: node index.js
 before_install:
-- openssl aes-256-cbc -K $encrypted_d060566ab9d3_key -iv $encrypted_d060566ab9d3_iv
-  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/id_rsa
+- openssl aes-256-cbc -K $encrypted_d060566ab9d3_key -iv $encrypted_d060566ab9d3_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
 - echo -e "Host 120.25.227.28\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
 - scp index.js root@120.25.227.28:~/test
