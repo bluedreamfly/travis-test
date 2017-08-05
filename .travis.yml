@@ -5,8 +5,9 @@ node_js:
 script: node index.js
 before_install:
 - openssl --help
+- su root
 - openssl aes-256-cbc -K $encrypted_d060566ab9d3_key -iv $encrypted_d060566ab9d3_iv
-  -in id_rsa.enc -out ~\/id_rsa -d
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
 - whoami
 - chmod 777 ~/.ssh
 - sudo touch ~/.ssh/id_rsa
