@@ -1,5 +1,5 @@
 nguage: node_js
-sudo: true
+sudo: enabled
 node_js:
 - node
 - '7'
